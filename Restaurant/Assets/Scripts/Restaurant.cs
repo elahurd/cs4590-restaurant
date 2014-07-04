@@ -14,8 +14,9 @@ public class Restaurant : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-
-		audio.PlayOneShot(audio.clip);
+	
+		if (other.gameObject.tag == "Player")
+			audio.PlayOneShot(audio.clip);
 
 	}
 }

@@ -535,6 +535,10 @@ public class CharacterMotor : MonoBehaviour
             movement.hitPoint = hit.point;
             movement.frameVelocity = Vector3.zero;
         }
+
+		if (hit.collider.attachedRigidbody != null)
+			hit.collider.attachedRigidbody.AddForce (new Vector3 (hit.moveDirection.x*5.0f, 0, hit.moveDirection.z*5.0f));
+
     }
 
     private IEnumerator SubtractNewPlatformVelocity()

@@ -18,7 +18,6 @@ public class Hobo : MonoBehaviour {
 	private float nextClip;
 
 	private float begTime;
-	private bool addToBegTime;
 
 	private bool startMumbling;
 
